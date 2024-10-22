@@ -1,5 +1,5 @@
 ## To build execute
-> ant -v dist
+> ant -v
 
 ## Then you can run the generated .jar file via 
 > java -jar --enable-preview cascadia.jar
