@@ -1,0 +1,28 @@
+<project name="cascadia" default="jar" basedir=".">
+    <description>
+        Cascadia Game
+    </description>
+    <target name="compile">
+        <javac srcdir="src" destdir="classes" release="23" includeantruntime="false">
+            <compilerarg value="--enable-preview" />
+            <classpath>
+                <fileset dir="lib">
+                    <include name="*.jar"/>
+                </fileset>
+                <pathelement path="classes"/>
+            </classpath>
+        </javac>
+    </target>
+    <target name="jar" depends="compile">
+        <jar basedir="classes" jarfile="cascadia.jar" manifest="src/META-INF/MANIFEST.MF"/>
+    </target>
+    <target name="javadoc">
+        <!-- TODO: create the javadoc -->
+    </target>
+    <target name="clean">
+        <delete>
+            <fileset dir="classes" includes="**/*.class"/>
+        </delete>
+        <delete file="cascadia.jar"/>
+    </target>
+</project>
