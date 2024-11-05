@@ -1,8 +1,4 @@
 # Java things
 *.class
 *.jar
-bin
-out
-classes/*.class
-target
 *.log
