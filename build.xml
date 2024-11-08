@@ -4,17 +4,17 @@
     </description>
     <target name="compile">
         <javac srcdir="src" destdir="classes" release="23" includeantruntime="false">
-            <compilerarg value="--enable-preview" />
             <classpath>
                 <fileset dir="lib">
-                    <include name="*.jar"/>
+                    <include name="**/*.jar"/>
                 </fileset>
                 <pathelement path="classes"/>
             </classpath>
         </javac>
     </target>
     <target name="jar" depends="compile">
-        <jar basedir="classes" jarfile="Cascadia.jar" manifest="src/META-INF/MANIFEST.MF"/>
+        <jar basedir="classes" jarfile="Cascadia.jar" manifest="MANIFEST.MF"/>
+        <!-- <jar basedir="classes" jarfile="Cascadia.jar"/> -->
     </target>
     <target name="javadoc">
         <!-- TODO: create the javadoc -->

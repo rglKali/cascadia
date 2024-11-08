@@ -1,4 +1,8 @@
-# Java things
-*.class
-*.jar
-*.log
+# Java artifacts
+classes/*.class
+
+# Editor settings
+.vscode
+
+# Target executable
+Cascadia.jar
